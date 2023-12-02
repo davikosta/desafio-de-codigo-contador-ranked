@@ -5,7 +5,7 @@ let isUserRanked = true
 //Área de chamada das funções
 calculate(10, 30);
 
-showVicOrLoses();
+showWinsOrLoses();
 
 calculateRank();
 
@@ -17,8 +17,8 @@ if(isUserRanked === true) {
 }
 
 //Área de funções
-function calculate(vitorias, derrotas) {
-    return result = vitorias - derrotas;
+function calculate(wins, loses) {
+    return result = wins - loses;
 };
 
 function showVicOrLoses() {
