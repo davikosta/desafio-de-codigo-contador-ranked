@@ -1,0 +1,59 @@
+//Área de declaração de variáveis
+let result = 0;
+let rank = " "
+let isUserRanked = true
+//Área de chamada das funções
+calculate(10, 30);
+
+showVicOrLoses();
+
+calculateRank();
+
+//Exibir o Rank
+if(isUserRanked === true) {
+    console.log(`O seu rank atual é de ${rank}`);
+} else {
+    console.log(rank);
+}
+
+//Área de funções
+function calculate(vitorias, derrotas) {
+    return result = vitorias - derrotas;
+};
+
+function showVicOrLoses() {
+if (result >= 0) {
+    console.log(`O seu saldo é positivo, seu número de vitórias é de ${result}`);
+} else {
+    console.log(`O seu saldo é negativo, seu número de derrotas é de ${-result}`);
+};
+}
+
+function calculateRank() {
+    switch(true) {
+        case result >= 0 && result <= 10:
+            rank = "Ferro";
+            break;
+        case result > 10 && result <= 20:
+            rank = "Bronze";
+            break;
+        case result >20 && result <= 50:
+            rank = "Prata";
+            break;
+        case result >50 && result <= 80:
+            rank = "Ouro"
+            break;
+        case result >80 && result <= 90:
+            rank = "Diamante";
+            break;
+        case result >90 && result <= 100:
+            rank = "Lendário";
+            break;
+        case result >= 101:
+            rank = "Imortal";
+            break;
+        default:
+            rank = "Você não possui um rank";
+            isUserRanked = false
+        }
+}
